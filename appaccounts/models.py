@@ -7,5 +7,4 @@ class Plan(models.Model):
     max_num_links = models.PositiveIntegerField()
 
 class CustomUser(AbstractUser):
-    plan = models.ForeignKey(Plan, related_name="users", on_delete=models.CASCADE)
-
+    plan = models.ForeignKey(Plan, related_name="users", on_delete=models.CASCADE, default=1)
